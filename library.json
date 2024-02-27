@@ -17,5 +17,19 @@
 	"url": "https://www.mischianti.org",
 	"frameworks": "Arduino",
     "version": "2.1.7",
-	"platforms": "*"
+	"platforms": "*",
+	"dependencies":[
+		{
+			"name" : "WiFi"
+		},
+		{
+			"name" : "Ethernet"
+		},
+		{
+			"name" : "FS"
+		},
+		{
+			"name" : "LittleFS"
+		}
+	]
 }
