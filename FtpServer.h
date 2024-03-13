@@ -544,8 +544,8 @@ class FtpServer
 public:
   FtpServer( uint16_t _cmdPort = FTP_CMD_PORT, uint16_t _pasvPort = FTP_DATA_PORT_PASV );
 
-  void    begin( const char * _user, const char * _pass, const char * welcomeMessage = "Welcome to Simply FTP server" );
-  void    begin( const char * welcomeMessage = "Welcome to Simply FTP server" );
+  IPAddress	begin( const char * _user, const char * _pass, const char * welcomeMessage = "Welcome to Simply FTP server" );
+  void    	begin( const char * welcomeMessage = "Welcome to Simply FTP server" );
 
   void 	  end();
   void 	  setLocalIp(IPAddress localIp);
