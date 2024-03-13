@@ -61,7 +61,7 @@ FtpServer::FtpServer( uint16_t _cmdPort, uint16_t _pasvPort )
   iniVariables();
 }
 
-void FtpServer::begin( const char * _user, const char * _pass, const char * _welcomeMessage )
+IPAddress FtpServer::begin( const char * _user, const char * _pass, const char * _welcomeMessage )
 {
 	if ( strcmp( _user, "anonymous" ) != 0) {
 		DEBUG_PRINTLN(F("NOT ANONYMOUS"));
@@ -97,6 +97,7 @@ void FtpServer::begin( const char * _user, const char * _pass, const char * _wel
   millisDelay = 0;
   cmdStage = FTP_Stop;
   iniVariables();
+  return localIp;
 }
 
 void FtpServer::begin( const char * _welcomeMessage ) {
